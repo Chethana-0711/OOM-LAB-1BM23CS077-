@@ -1,0 +1,190 @@
+1. Introduction
+1.1 Purpose
+
+The purpose of this SRS document is to describe the functional and non-functional requirements for the Smart Waste Segregation and Recycling System (SWSRS). This system is designed to automate the segregation of waste into various categories such as biodegradable, non-biodegradable, and recyclable materials. It aims to promote efficient waste management through intelligent classification, monitoring, and reporting.
+
+1.2 Scope
+
+The Smart Waste Segregation and Recycling System combines sensors, a microcontroller, and software intelligence to identify and separate waste automatically. The system uses sensors (e.g., infrared, moisture, and metal detectors) and image recognition to detect material types. Data is collected and transmitted to a cloud or local dashboard, allowing municipalities or users to monitor waste levels and recycling statistics.
+The system benefits residential societies, industries, and local authorities by:
+
+Reducing manual waste segregation effort.
+
+Improving recycling rates.
+
+Providing real-time waste monitoring and analytics.
+
+1.3 Definitions, Acronyms, and Abbreviations
+
+SWSRS – Smart Waste Segregation and Recycling System
+
+IoT – Internet of Things
+
+GUI – Graphical User Interface
+
+AI – Artificial Intelligence
+
+ML – Machine Learning
+
+1.4 References
+
+IEEE Std 830-1998 – IEEE Recommended Practice for Software Requirements Specifications
+
+Municipal Solid Waste Management Guidelines (Government of India, 2016)
+
+Various research papers and IoT documentation on waste management
+
+1.5 Overview
+
+This document details system features, interfaces, design constraints, and performance requirements. It is intended for developers, designers, and stakeholders involved in the development of SWSRS.
+
+2. Overall Description
+2.1 Product Perspective
+
+The SWSRS functions as a standalone embedded system integrated with IoT capabilities. It consists of:
+
+A hardware segregation unit controlled by microcontrollers.
+
+A software module for data collection and analysis.
+
+A user interface (mobile or web-based) for monitoring and analytics.
+
+The system interacts with:
+
+Hardware sensors for waste identification.
+
+Cloud or local databases for storage.
+
+Users or authorities for viewing data and managing operations.
+
+2.2 Product Functions
+
+Key functions include:
+
+Automatic detection and classification of waste materials.
+
+Segregation into biodegradable, recyclable, and non-recyclable bins.
+
+Real-time waste level monitoring using sensors.
+
+Notification alerts when bins are full.
+
+Data analytics and reports on waste collection and recycling trends.
+
+Remote monitoring through an IoT-enabled dashboard.
+
+2.3 User Characteristics
+
+Intended users include:
+
+Household members using the system for domestic waste management.
+
+Municipal waste authorities monitoring large-scale deployments.
+
+System administrators maintaining software and hardware components.
+Users are expected to have basic computer or smartphone literacy.
+
+2.4 Constraints
+
+Power and network connectivity limitations.
+
+Sensor calibration and accuracy constraints.
+
+Environmental factors such as humidity or temperature affecting sensors.
+
+Budgetary limitations for large-scale deployment.
+
+2.5 Assumptions and Dependencies
+
+Reliable internet connectivity is available for IoT features.
+
+Regular maintenance of hardware components is ensured.
+
+Waste materials are reasonably distinguishable by the sensors.
+
+3. Specific Requirements
+3.1 Functional Requirements
+
+Waste Detection:
+The system shall detect waste type using sensors and image recognition algorithms.
+
+Segregation Mechanism:
+Based on classification results, the system shall direct waste to the correct bin via actuators or servo motors.
+
+Waste Level Monitoring:
+The system shall continuously monitor waste bin levels and report when capacity exceeds a threshold.
+
+Notification System:
+The system shall send alerts to the user or authority when bins are full or malfunction occurs.
+
+Data Logging:
+The system shall store data regarding waste quantity, type, and time of disposal for analytics.
+
+User Interface:
+The system shall provide a web or mobile dashboard for real-time monitoring, analytics, and report generation.
+
+Maintenance Alerts:
+The system shall notify users when sensor calibration or system maintenance is required.
+
+Security:
+The system shall require secure login credentials for authorized access to the dashboard.
+
+3.2 Non-Functional Requirements
+
+Performance:
+The system shall classify and segregate waste within five seconds per item.
+
+Reliability:
+The system shall have at least 95% uptime under normal operating conditions.
+
+Accuracy:
+Waste classification accuracy shall be at least 90% for trained materials.
+
+Usability:
+The interface shall be intuitive and accessible on mobile and desktop devices.
+
+Scalability:
+The system shall support integration with multiple segregation units in a networked environment.
+
+Security:
+Data transmission shall be encrypted using secure communication protocols (e.g., HTTPS, MQTT with TLS).
+
+Maintainability:
+The system shall allow easy software updates and hardware calibration.
+
+Environmental Compliance:
+The system shall comply with waste management and recycling guidelines of the governing authority.
+
+3.3 External Interface Requirements
+
+Hardware Interfaces: Sensors (IR, metal, moisture, ultrasonic), servo motors, microcontroller (e.g., Arduino or Raspberry Pi).
+
+Software Interfaces: IoT platform APIs, database (e.g., Firebase, MySQL), and cloud services for data analytics.
+
+User Interfaces: Web-based dashboard or mobile application showing bin levels, alerts, and reports.
+
+Communication Interfaces: Wi-Fi or GSM module for real-time data transmission.
+
+4. System Features
+
+Intelligent waste classification using ML-based recognition.
+
+Automated bin movement for sorting.
+
+Real-time IoT monitoring with cloud connectivity.
+
+Analytics dashboard with trends, charts, and reports.
+
+Automatic notifications for bin status and maintenance.
+
+5. Other Requirements
+
+The system should be developed using modular and object-oriented design principles.
+
+The source code shall be well-documented and version-controlled.
+
+The system should support future integration with smart city infrastructure and recycling plants.
+
+6. Appendix
+
+The appendix includes supplementary information such as datasets used for training the classifier, references to sensor datasheets, and technical documentation for hardware integration.
